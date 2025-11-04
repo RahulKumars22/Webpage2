@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<script>
+    function btnFind_onclick() {
+        // alert(Date());
+        let mn=nummn.value;
+       // alert(mn);
+    let res="";
+    for (let i=1; i < 21; i++) {
+        res += (i + "x" + mn + " = " + (i * mn)) + "\n";
+    }
+    traes.value = res;
+}
+</script>
+<body>
+<center><h1>Multiplication Table</h1>
+<table border="1">
+    <tr>
+        <td>
+            Multiplication Number
+        </td>
+        <td>
+            <input type="number" id="nummn" placeholder="0"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td>
+            <textarea name="" id="traes" rows="20" col="14" readonly="readonly" style="resize: none;"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Cancel" onclick="location.href='multbl.html';"/>
+        </td>
+        <td>
+            <input type="button" value="Find" onclick="btnFind_onclick();">
+        </td>
+    </tr>
+</table>
+</center>
+</body>

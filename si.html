@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="zlib/ucss/ualign1.css" />
+</head>
+<script>
+    function btnFind_onclick() {
+
+        let p=nump.value;
+        p=parseFloat(p);
+        p=isNaN(p)?0:p;
+
+        let n=numn.value;
+        n=parseInt(n);
+        n=isNaN(n)?0:n;
+
+        let r=numr.value;
+        r=parseFloat(r);
+        r=isNaN(r)?0:r;
+
+        let si = p * n * r / 100;
+        numsi.value=si;
+    }
+</script>
+<body>
+    <center>
+        <h1>Simple Intrest</h1>
+        <table border="1">
+            <tr>
+                <td>Principle</td>
+                <td><input type="text" name="" id="nump"></td>
+            </tr>
+            <tr>
+                <td>Number of months</td>
+                <td><input type="text" name="" id="numn"></td>
+            </tr>
+            <tr>
+                <td>Rate of intrest</td>
+                <td><input type="text" name="" id="numr"></td>
+            </tr>
+            <tr>
+                <td>Simple intrest</td>
+                <td><input type="text" name="" id="numsi" readonly="readonly"></td>
+            </tr>
+            <tr colspan="2">
+                <td><input type="button" value="Cancel" onclick="location.href='si.html';"></td>
+                <td><input type="button" value="Find" onclick="btnFind_onclick();"></td>
+            </tr>
+        </table>
+    </center>
+</body>

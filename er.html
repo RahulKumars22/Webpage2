@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="zlib/ucss/ualign1.css"/>
+</head>
+<script>
+    function btnFind_onclick(){
+        var m1,m2,total,avg,result = "fail";
+        m1=m2=total=avg=0;
+        m1=numm1.value;
+        m2=numm2.value;
+        m1=parseFloat(m1);
+        m2=parseFloat(m2);
+
+        total=m1+m2;
+        avg=total/2;
+
+        result=(m1>34.4 & m2>34.4)?"pass":"fail";
+        tbxtot.value=total;
+        tbxavg.value=avg;
+        tbxres.value=result;
+    }
+</script>
+<body>
+<center>
+    <h1>Exam result</h1>
+<table border="1">
+    <tr>
+        <td>Roll no</td>
+        <td><input type="text" name="" id="tbxname" placeholder="unknown"/></td>
+    </tr>
+
+     <tr>
+        <td>Mark 1</td>
+        <td><input type="text" name="" id="numm1" placeholder="0"/></td>
+    </tr>
+
+     <tr>
+        <td>Mark 2</td>
+        <td><input type="text" name="" id="numm2" placeholder="0"/></td>
+    </tr>
+
+     <tr>
+        <td>Total</td>
+        <td><input type="text" name="" id="tbxtot" placeholder="total"/></td>
+    </tr>
+
+     <tr>
+        <td>Average</td>
+        <td><input type="text" name="" id="tbxavg" readonly="readonly"/></td>
+    </tr>
+
+     <tr>
+        <td>Result</td>
+        <td><input type="text" name="" id="tbxres" placeholder="fail" readonly="readonly"/></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Cancel" onclick="location.href='er.html';"/>
+        </td>
+
+        <td>
+            <input type="button" value="Find" onclick="btnFind_onclick();"/>
+        </td>
+    </tr>
+</table>
+</center>
+    
+</body>

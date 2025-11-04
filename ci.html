@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="zlib/ucss/ualign1.css" />
+</head>
+<script>
+    function btnFind_onclick() {
+
+        var p=nump.value;
+        p=parseFloat(p);
+        p=isNaN(p)?0:p;
+
+        var n=numn.value;
+        n=parseInt(n);
+        n=isNaN(n)?0:n;
+
+        var r=numr.value;
+        r=parseFloat(r);
+        r=isNaN(r)?0:r;
+
+        var ci = p, si = 0;
+        for(let m=1; m<=n; m++){
+            si=ci*r/100;
+            ci=si+ci;
+
+            
+        }
+        numci.value=ci;
+    }
+</script>
+<body>
+    <center>
+        <h1>Compound Intrest</h1>
+        <table border="1">
+            <tr>
+                <td>Principle</td>
+                <td><input type="text" name="" id="nump"></td>
+            </tr>
+            <tr>
+                <td>Number of months</td>
+                <td><input type="text" name="" id="numn"></td>
+            </tr>
+            <tr>
+                <td>Rate of intrest</td>
+                <td><input type="text" name="" id="numr"></td>
+            </tr>
+            <tr>
+                <td>Simple intrest</td>
+                <td><input type="text" name="" id="numci" readonly="readonly"></td>
+            </tr>
+            <tr colspan="2">
+                <td><input type="button" value="Cancel" onclick="location.href='ci.html';"></td>
+                <td><input type="button" value="Find" onclick="btnFind_onclick();"></td>
+            </tr>
+        </table>
+    </center>
+</body>

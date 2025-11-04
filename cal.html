@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<body>
+<center><h1>Calculator</h1>
+<table border="1">
+    <tr>
+        <td>First number</td>
+        <td>
+            <input type ="number" id="numfn" placeholder="0"/>
+        </td>
+     </tr>
+     <tr>
+        <td>Second number</td>
+        <td>
+            <input type ="number" id="numsn" placeholder="0"/>
+        </td>
+     </tr>
+     <tr>
+        <td>Result</td>
+        <td>
+            <input type ="textarea" id="tbxres" placeholder="0" readonly="readonly"/>
+        </td>
+     </tr>
+        <td colspan="2" align="center">
+            <input type="button" value="Cancel" onclick="location.href='cal.html';"/>
+            <input type="button" value="+" onclick="tbxres.value= parseInt(numfn.value) + parseInt(numsn.value);"/>
+    
+            <input type="button" value="-" onclick="tbxres.value= parseInt(numfn.value) - parseInt(numsn.value);"/>
+        
+        
+            <input type="button" value="x" onclick="tbxres.value= parseInt(numfn.value) * parseInt(numsn.value);"/>
+        
+        
+            <input type="button" value="/" onclick="tbxres.value= parseInt(numfn.value) / parseInt(numsn.value);"/>
+        
+
+            <input type="button" value="%" onclick="tbxres.value= parseInt(numfn.value) % parseInt(numsn.value);"/>
+        </td>
+    </tr>
+</table>
+</center>
+</body>

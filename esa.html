@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="zlib/ucss/ualign1.css"/>
+</head>
+<title>Employee salary allowance</title>
+    <script>
+        function btnFind_onclick() {
+            var sal,hra,da,pf,gp,np;
+            sal=hra=da=pf=gp=np=0;
+            sal=numsal.value;
+            sal=parseFloat(sal);
+
+            hra=sal*15/100;
+            da=sal*20/100;
+            pf=sal*35/100;
+            gp=sal+hra+da;
+            np=gp-pf;
+
+            tbxhra.value=hra;
+            tbxda.value=da;
+            tbxpf.value=pf;
+            tbxgp.value=gp;
+            tbxnp.value=np;
+        }
+    </script>
+<body>
+<center>
+    <h1>Employee salary allowance</h1>
+    <table border="1">
+        <tr>
+            <td>
+                Employee id
+            </td>
+            <td>
+                <input name="number" id="numeid" placeholder="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Employee name
+            </td>
+            <td>
+                <input name="text" id="tbxename" placeholder="unknown" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Salary
+            </td>
+            <td>
+                <input name="number" id="numsal" placeholder="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                House rent allowance
+            </td>
+            <td>
+                <input name="text" id="tbxhra" placeholder="0" readonly="readonly" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Dearness allowance
+            </td>
+            <td>
+                <input name="text" id="tbxda" placeholder="0" readonly="readonly" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Provident fund
+            </td>
+            <td>
+                <input name="text" id="tbxpf" placeholder="0" readonly="readonly" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Gross pay
+            </td>
+            <td>
+                <input name="text" id="tbxgp" placeholder="0" readonly="readonly" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Next pay
+            </td>
+            <td>
+                <input name="text" id="tbxnp" placeholder="0" readonly="readonly" />
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="Cancel" onclick="location.href='esa.html';"/></td>
+            <td><input type="button" value="Find" onclick="btnFind_onclick();"/></td>
+        </tr>
+    </table>
+</center>
+
+    
+</body>
