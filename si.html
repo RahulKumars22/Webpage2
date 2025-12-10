@@ -10,15 +10,15 @@
         p=parseFloat(p);
         p=isNaN(p)?0:p;
 
-        let n=numn.value;
-        n=parseInt(n);
-        n=isNaN(n)?0:n;
+        let y=numy.value;
+        y=parseInt(y);
+        y=isNaN(y)?0:y;
 
         let r=numr.value;
         r=parseFloat(r);
         r=isNaN(r)?0:r;
 
-        let si = p * n * r / 100;
+        let si = p * y * r / 100;
         numsi.value=si;
     }
 </script>
@@ -31,8 +31,8 @@
                 <td><input type="text" name="" id="nump"></td>
             </tr>
             <tr>
-                <td>Number of months</td>
-                <td><input type="text" name="" id="numn"></td>
+                <td>Number of years</td>
+                <td><input type="text" name="" id="numy"></td>
             </tr>
             <tr>
                 <td>Rate of intrest</td>
@@ -48,4 +48,5 @@
             </tr>
         </table>
     </center>
+
 </body>
